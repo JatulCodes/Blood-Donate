@@ -1,0 +1,19 @@
+#form{
+    background-color: rgb(252, 243, 243);
+    margin-top: 2%;
+}
+
+.btn-lg{
+    margin: auto;
+}
+
+#form1{
+    margin-left: 10%;
+}
+#form2{
+    /* margin-right: 10%; */
+    margin-left: 10%;
+}
+/* #submit{
+    margin-top: 35%;
+} */

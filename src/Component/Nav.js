@@ -22,6 +22,7 @@ const Navbar =() => {
                     <li><Link to="/Bloodfacts"> BLOODFACTS</Link></li>
                     <li><Link to="/Donarregister"> DONARREGISTER</Link></li>
                     <li><Link to="/Searchdonar"> SEARCHDONAR</Link></li>
+                    <li><Link to="/bookinglist"> DONARLIST </Link></li>
                 </ul>
               
                 </div> 
