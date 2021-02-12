@@ -3,13 +3,35 @@ import './donarregister.css'
 const url = "https://blood-donr.herokuapp.com/registration"
 
 class Register extends React.Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
             this.state = {
-                register:''
+                name :'',
+                gender:'',
+                DOB:'',
+                bloodgroup:'',
+                weight:'',
+                area:'',
+                mobileno:''
             }
+    }
+    handlesubmit=() => {
+        console.log(this.state)
+        fetch( url,
+           {
+               method:'POST',
+               headers:{
+                   'Accept':'application/json',
+                   'Content-Type':'application/json'
+               },
+               body:JSON.stringify(this.state)
+           })
+           .then(this.props.history.push('/bookinglist'))
+    }
 
+    handlechange=(event) =>{
+        this.setState({[event.target.name]:event.target.value})
     }
     render(){
         return (
@@ -17,22 +39,22 @@ class Register extends React.Component {
                <h2> <center>DONAR REGISTER  </center> </h2>
                  <div class="form-group">
                      <label> Name </label>
-                     <input type="text" placeholder="Enter Name"  
-                     class="form-control"/>
+                     <input type="text" name="name" value={this.state.name} autoComplete="off" required placeholder="Enter Name"  
+                     class="form-control" onChange={ this.handlechange}/>
                  </div>
                  <div class="form-group">
                      <label  > Gender 
-                     <input type="radio" value="Male"  name="gender"  /> Male
-                     <input type="radio" value="Female"  name="gender" /> Female
+                     <input type="radio" value={this.state.gender}  name="gender"  onChange={ this.handlechange} /> Male
+                     <input type="radio" value={this.state.gender}  name="gender" onChange={ this.handlechange} /> Female
                  </label>
-                 </div>
+                 </div> 
                  <div class="form-group">
                      <label> Date Of Birth </label>
-                     <input type="date" class="form-control"/>
+                     <input type="date" name="DOB" value={this.state.DOB} autoComplete="off" required  class="form-control" onChange={ this.handlechange} />
                  </div>
                  <div class="form-group">
                      <label> Blood Group </label>
-                     <select class="form-control" >
+                     <select class="form-control" name="bloodgroup" value={this.state.bloodgroup} autoComplete="off" required  onChange={ this.handlechange} >
                          <option disabled selected > select blood group </option>
                          <option> A+ </option>
                          <option> A- </option>
@@ -47,18 +69,18 @@ class Register extends React.Component {
                  </div>
                  <div class="form-group">
                      <label> weight </label>
-                     <input type="number" class="form-control" placeholder="Enter Weight" />
+                     <input type="number" name="weight" value={this.state.weight} autoComplete="off" required  class="form-control" placeholder="Enter Weight" onChange={ this.handlechange} />
                      
                  </div>
                  <div class="form-group">
                      <label> Area </label>
-                     <input type="text" class="form-control" placeholder="Enter Area" />
+                     <input type="text" name="area" value={this.state.area} class="form-control" placeholder="Enter Area" autoComplete="off" required  onChange={ this.handlechange} />
                  </div>
                  <div class="form-group">
                      <label> Mobile no </label>
-                     <input type="number" class="form-control" placeholder="Mobile number" />
+                     <input type="number" name="mobileno" value={this.state.mobileno} class="form-control" placeholder="Mobile number" autoComplete="off" required  onChange={ this.handlechange} />
                  </div>
-                 <div class="btn btn-success btn btn-lg" >
+                 <div class="btn btn-success btn btn-lg" onClick={this.handlesubmit} >
                      Register
                  </div>
            </div>

@@ -8,7 +8,7 @@ const Donarlist = (props) =>{
                     <tr>
                     <td> {item._id} </td>
                     <td> {item.name} </td>
-                    <td> {item.gender} </td>
+                    {/* <td> {item.gender} </td> */}
                     <td> {item.DOB} </td>
                     <td> {item.bloodgroup} </td>
                     <td> {item.weight} </td>
@@ -34,7 +34,7 @@ const Donarlist = (props) =>{
                             <tr>
                             <th> OrderId </th>
                             <th> Name </th>
-                            <th> Gender </th>
+                            {/* <th> Gender </th> */}
                             <th> DOB </th>
                             <th> Bloodgroup </th>
                             <th> Weight </th>
