@@ -17,17 +17,26 @@ class Register extends React.Component {
             }
     }
     handlesubmit=() => {
-        console.log(this.state)
-        fetch( url,
-           {
-               method:'POST',
-               headers:{
-                   'Accept':'application/json',
-                   'Content-Type':'application/json'
-               },
-               body:JSON.stringify(this.state)
-           })
-           .then(this.props.history.push('/bookinglist'))
+        if(this.state.name==''||this.state.DOB ==''||this.state.bloodgroup ==''||this.state.weight ==''||this.state.area ==''||this.state.mobileno ==''){
+            alert("All filds are required")
+        } else{
+            if(this.state.mobileno.length==10){
+                console.log(this.state)
+                fetch( url,
+                    {
+                        method:'POST',
+                        headers:{
+                            'Accept':'application/json',
+                            'Content-Type':'application/json'
+                        },
+                        body:JSON.stringify(this.state)
+                    })
+                    .then(this.props.history.push('/bookinglist'))
+                 }
+                 else{
+                     alert("Enter right phone no")
+                 }
+            }
     }
 
     handlechange=(event) =>{
@@ -51,11 +60,11 @@ class Register extends React.Component {
                  <div class="form-group">
                      <label> Date Of Birth </label>
                      <input type="date" name="DOB" value={this.state.DOB} autoComplete="off" required  class="form-control" onChange={ this.handlechange} />
-                 </div>
+                 </div> 
                  <div class="form-group">
                      <label> Blood Group </label>
                      <select class="form-control" name="bloodgroup" value={this.state.bloodgroup} autoComplete="off" required  onChange={ this.handlechange} >
-                         <option disabled selected > select blood group </option>
+                         <option  selected disabled > select blood group </option>
                          <option> A+ </option>
                          <option> A- </option>
                          <option> B+ </option>
@@ -80,8 +89,8 @@ class Register extends React.Component {
                      <label> Mobile no </label>
                      <input type="number" name="mobileno" value={this.state.mobileno} class="form-control" placeholder="Mobile number" autoComplete="off" required  onChange={ this.handlechange} />
                  </div>
-                 <div class="btn btn-success btn btn-lg" onClick={this.handlesubmit} >
-                     Register
+                 <div >
+                     <input class="btn btn-success btn btn-lg" type="submit"  onClick={this.handlesubmit} />
                  </div>
            </div>
         )

@@ -13,15 +13,19 @@ class Searchdonar extends React.Component {
         rendergroup=(data) => {
                 if(data){
                     return data.map((item) => {
+                        console.log(item.Blood_Group)
                         return(
-                            <option value= {item.Blood_Group} ></option>
+                            <option value= {item.Blood_Group} > {item.Blood_Group} </option>
                         )
                     })
                 }else{
                     <span> connection Fail </span>
                 }
          }
+
+
     render(){
+        
         // console.log(this.state.bloodtype)
         return (
             <div className="container">
@@ -55,8 +59,9 @@ class Searchdonar extends React.Component {
                 </div>
             </div>
         )
-    }
+    } 
     componentDidMount(){
+        alert("register")
         fetch( url ,{method:'GET'})
         .then((res) => res.json())
         .then((data) => this.setState({bloodtype:data}))
