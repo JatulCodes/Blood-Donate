@@ -34,16 +34,13 @@ class Postdisply extends React.Component {
                         </div>
                         <div class="form-group">
                             <label> Required Before </label>
-                            <input type="text" class="form-control" placeholder="Required Before" />
+                            <input type="date" class="form-control" placeholder="Required Before" />
                         </div> 
                         <div class="form-group">
                             <label> Hospital Name </label>
                             <input type="text" class="form-control" placeholder=" Hospital Name" />
                         </div>
-                        <div class="form-group">
-                            <label> Mobile no </label>
-                            <input type="number" class="form-control" placeholder="Mobile number" />
-                        </div>
+                        
                     </div>
                     <div className="col-md-4 col-sm-4 col-xs-4" id="form2" >
                     <div class="form-group">
@@ -56,19 +53,13 @@ class Postdisply extends React.Component {
                             <input type="number" class="form-control" placeholder="Patient age" />
                         </div> 
                         <div class="form-group">
-                            <label> Date Of Birth </label>
-                            <input type="date" class="form-control"/>
-                        </div>
-                        <div class="form-group">
-                            <label> Gender 
-                            <input type="radio" value="Male"  name="gender"  /> Male
-                            <input type="radio" value="Female"  name="gender" /> Female
-                        </label>
+                            <label> Mobile no </label>
+                            <input type="number" class="form-control" placeholder="Mobile number" />
                         </div>
                     </div>
                     <br/>
                     </div>   
-                    <input id="submit" type="submit" value="Submit"/>
+                    <input id="submmit" type="submit" value="Submit"/>
                     
                     </form>
                  

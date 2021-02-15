@@ -23,7 +23,6 @@ class Searchdonar extends React.Component {
                 }
          }
 
-
     render(){
         
         // console.log(this.state.bloodtype)
@@ -38,10 +37,10 @@ class Searchdonar extends React.Component {
                 <div className="panel panel-success ">
                     <div className="panel-heading">Blood Donors List</div>
                     <div className="panel-body">
-                    <table className="table table-responsive">
+                    <table className="table table-responsive" id="tabledesign">
                         <thead>
                             <tr>
-                            <th> OrderId </th>
+                            {/* <th> OrderId </th> */}
                             <th> Name </th>
                             <th> DOB </th>
                             <th> Bloodgroup </th>
@@ -61,7 +60,7 @@ class Searchdonar extends React.Component {
         )
     } 
     componentDidMount(){
-        alert("register")
+        alert("Before using this site register in it so that you can also donate your blood and make someone's face smile.) ")
         fetch( url ,{method:'GET'})
         .then((res) => res.json())
         .then((data) => this.setState({bloodtype:data}))

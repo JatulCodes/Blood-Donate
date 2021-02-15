@@ -9,7 +9,7 @@ const Comp = () => {
                
               <div class="container" >
               <h2 className="tableheading" > Red Blood cell compatibility Table </h2>
-                    <table class="table">
+                    <table class="table" id="firsttable">
                         <thead>
                             <tr>
                                 <th>

@@ -64,7 +64,7 @@ class Register extends React.Component {
                  <div class="form-group">
                      <label> Blood Group </label>
                      <select class="form-control" name="bloodgroup" value={this.state.bloodgroup} autoComplete="off" required  onChange={ this.handlechange} >
-                         <option  selected disabled > select blood group </option>
+                         <option  selected > select blood group </option>
                          <option> A+ </option>
                          <option> A- </option>
                          <option> B+ </option>
@@ -89,8 +89,8 @@ class Register extends React.Component {
                      <label> Mobile no </label>
                      <input type="number" name="mobileno" value={this.state.mobileno} class="form-control" placeholder="Mobile number" autoComplete="off" required  onChange={ this.handlechange} />
                  </div>
-                 <div >
-                     <input class="btn btn-success btn btn-lg" type="submit"  onClick={this.handlesubmit} />
+                 <div>
+                     <input class="btn btn-success btn btn-lg" id="submitt" type="submit"  onClick={this.handlesubmit} />
                  </div>
            </div>
         )
