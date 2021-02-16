@@ -24,7 +24,7 @@ const Comp = () => {
                         <tbody>
                             <tr>
                                 <td class="edittable">
-                                    O+
+                                    O-
                                 </td>
                                 <td>
                                     O-

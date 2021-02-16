@@ -1,6 +1,7 @@
 import React from 'react'
 import Donarlist from './donarlist'
 import './donarlist.css'
+
 const url = "https://blood-donr.herokuapp.com/register"
 
 class Donarapi extends React.Component{
@@ -10,13 +11,11 @@ class Donarapi extends React.Component{
             this.state = {
                 list : ''
             }
-    }
+    } 
     render(){
         return(
             <React.Fragment>
-                {/* <div className="row">
-                    <div className="col-lg-2 col-md-2 col-sm-2"> */}
-                        <div className="groupfilter" >
+                    <div className="groupfilter" >
                         <center> <b> Blood Group </b> </center> <br/>
                         <label> <input type="radio" value="" name="group"/> 
                             All 
@@ -45,13 +44,8 @@ class Donarapi extends React.Component{
                         <label> <input type="radio" value="5" name="group"/> 
                             O-
                         </label> 
-                        </div>
-                    {/* </div> */}
-                    {/* <div className="col-lg-7 col-md-7 col-sm-7"> */}
+                    </div>
                     <Donarlist Listing = {this.state.list} />
-                    {/* </div> */}
-                {/* </div> */}
-               
             </React.Fragment>
         )
     }

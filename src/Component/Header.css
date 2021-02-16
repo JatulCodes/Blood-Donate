@@ -54,7 +54,8 @@
 .active{
     color: white;
     border: 5px double white;
-    /* padding:  25px 5px; */
+    background-color: rgb(161, 56, 114);
+    box-shadow: 0px 6px 6px rgb(212, 70, 70);
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -63,10 +64,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: absolute; */
     margin: auto;
     margin-left: 30%;
     margin-top:  20%;
+}
+
+#donars{
+   margin-top: 30%;
+   position: absolute;
 }
 
 @media screen and (max-width:1200px){
@@ -78,5 +83,8 @@
     }
     #edit1{
         translate:(0, -50%)
+    }
+    #donars{
+        margin-top: 10%;
     }
 }

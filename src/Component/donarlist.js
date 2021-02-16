@@ -1,5 +1,5 @@
 import React from 'react' ;
-import './donarlist.css'
+import './donarlist.css' 
 const Donarlist = (props) =>{
     const Booking = ({Listing}) =>{
         if(Listing){
@@ -24,7 +24,7 @@ const Donarlist = (props) =>{
                 </div>
             )
         }
-    }
+    } 
         return(
             <React.Fragment>
                 <div className="container" id="tabledesign">
@@ -50,7 +50,7 @@ const Donarlist = (props) =>{
             </React.Fragment>
         )
     
-        }
+    }
 
 export default Donarlist
 
