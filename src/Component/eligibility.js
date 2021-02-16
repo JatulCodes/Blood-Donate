@@ -28,6 +28,7 @@ const Eligibility = () => {
                         <li>Hemoglobin deficiency / Anemia (recently)</li>
                         <li>Drastic weight loss (recently)</li>
                     </ul>
+                    <iframe width="50%" height="315" id="eligibityvedio" src="https://www.youtube.com/embed/SN9NH7mUbls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
         </React.Fragment>
     )

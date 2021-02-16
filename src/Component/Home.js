@@ -6,6 +6,7 @@ const Home = () => {
         <div>
             <img id="image" src="./image/third.jpg" alt="icon"/>
             <div class="container" >
+           
                <Link to="/Home/post" ><h1 className="postheading" > POST YOUR REQUIREMENT </h1> </Link> 
                 <div class="panel panel-info">
                     <div class="panel-heading">Benefits</div>
@@ -32,8 +33,12 @@ const Home = () => {
                     <p> Out of which only a meager 5 Lakh units of blood are available
                     </p>
                 </div>
-            </div>            
+                <iframe width="100%" height="500" id="vediodesign" src="https://www.youtube.com/embed/-1O4jlEhsxU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>   
+           
+            {/* <iframe height="400" width="400" src="https://www.youtube.com/watch?v=-1O4jlEhsxU" ></iframe>          */}
         </div>  
+        
     )
 }
 
