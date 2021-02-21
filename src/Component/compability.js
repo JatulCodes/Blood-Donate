@@ -2,12 +2,9 @@ import React from 'react'
 import './compability.css'
 const Comp = () => {
     return (
-        <React.Fragment>
-               {/* <div className="tableedit"> 
-                   <h3> Red Blood cell compatibility Table </h3>
-               </div> */}
-               
+        <React.Fragment>   
               <div class="container" >
+              <img id="image" src="./image/list.gif" alt="icon"/>
               <h2 className="tableheading" > Red Blood cell compatibility Table </h2>
                     <table class="table" id="firsttable">
                         <thead>
