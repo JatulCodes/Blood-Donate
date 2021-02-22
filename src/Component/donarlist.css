@@ -9,7 +9,7 @@
     width: 20%;
     margin-top:5%;
     margin-left: 5%; 
-    padding-left: 5%;
+    padding-left: 3%;
     font-size: 15px;
     font-weight: bold;
     float: left;
@@ -25,7 +25,20 @@
 }
 #tabledesign{
     text-align: center;
+} 
+
+#bloodfilterheading{
+    color: red;
+    font-weight: bold;
 }
+
+#bloodfiltertext{
+    border: 5px double rgb(224, 167, 157);
+    padding: 2px;
+    margin-right: 7%;
+}
+
+
 
 @media screen and (max-width:685px){
     .groupfilter{

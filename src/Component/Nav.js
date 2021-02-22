@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import Change from './change'
 const Navbar =() => {
     return(
         <React.Fragment>
@@ -19,11 +20,12 @@ const Navbar =() => {
                    <li> <Link to="/">HOME</Link></li> 
                     <li> <Link to="/ELIGIBILITY">ELIGIBILITY</Link></li> 
                     <li> <Link to="/Compability"> COMPABILITY</Link></li>
-                    <li><Link to="/Bloodfacts"> BLOODFACTS</Link></li>
-                    <li><Link to="/Donarregister"> DONARREGISTER</Link></li>
-                    <li><Link to="/Searchdonar"> SEARCHDONAR</Link></li>
-                    <li><Link to="/bookinglist"> DONARLIST </Link></li>
-                    <li><Link to="/Bloodrequired"> BLOODREQUIRED </Link></li>
+                    <li><Link to="/Bloodfacts"> BLOOD FACTS</Link></li>
+                    <li><Link to="/Donarregister"> DONAR REGISTER</Link></li>
+                    <li><Link to="/Searchdonar"> SEARCH DONAR</Link></li>
+                    <li><Link to="/bookinglist"> DONAR LIST </Link></li>
+                    <li><Link to="/Bloodrequired"> BLOOD REQUIRED </Link></li> 
+                   <li> <Change/> </li> 
                 </ul>
                 </div> 
             </div>

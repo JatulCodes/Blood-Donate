@@ -30,7 +30,7 @@ const Postrequire = (props) => {
         <React.Fragment>
             <div className="container">
                 <h2> <center> FOLLOWING BLOOD REQUIRED</center>  </h2>
-                        <table className="table" id="donartable">
+                        <table className="table" id="donarrtable">
                             <thead>
                                 <tr>
                                 <th> Blood Group </th>

@@ -19,19 +19,38 @@ class Postdisply extends React.Component {
                     }
     }
 
-    handlesubmit=()=>{
-        fetch( url,
-            {
-                method:'POST',
-                headers:{
-                    'Accept':'application/json',
-                    'Content-Type':'application/json'
-                },
-                body:JSON.stringify(this.state)
-            })
-            .then(this.props.history.push('/Bloodrequired'))
+    handlesubmit=()=>{ 
+        if(this.state.bloodgroup==''||this.state.units ==''||this.state.reason ==''||this.state.requirementbefore ==''||this.state.hospitalname ==''||this.state.patientname ==''||this.state.patientage ==''||this.state.mobileno ==''){
+            alert("All filds are required")
+        } else{ 
+            if(this.state.mobileno.length==10){
+                fetch( url,
+                    {
+                        method:'POST',
+                        headers:{
+                            'Accept':'application/json',
+                            'Content-Type':'application/json'
+                        },
+                        body:JSON.stringify(this.state)
+                    })
+                    .then(this.props.history.push('/Bloodrequired'))
+            } else{
+                alert("Enter right phone no")
+            }
+        
          }
-    
+    }
+
+    handlereset = () => {
+        this.setState({mobileno:''})
+        this.setState({patientage:''})
+        this.setState({patientname:''})
+        this.setState({hospitalname:''})
+        this.setState({requirementbefore:''})
+        this.setState({reason:''})
+        this.setState({units:''})
+        this.setState({bloodgroup:''})
+    }
 
     handlechange=(event)=>{
         this.setState({[event.target.name]:event.target.value})
@@ -48,7 +67,7 @@ class Postdisply extends React.Component {
                         <div class="form-group">
                             <label> Blood Group </label>
                             <select class="form-control" autoComplete="off" name="bloodgroup" value={this.state.bloodgroup} onChange={ this.handlechange}>
-                                <option disabled selected > select blood group </option>
+                                <option  selected  > select blood group </option>
                                 <option> A+ </option>
                                 <option> A- </option>
                                 <option> B+ </option>
@@ -90,11 +109,11 @@ class Postdisply extends React.Component {
                             <label> Mobile no </label>
                             <input type="number" autoComplete="off" class="form-control" name="mobileno" value={this.state.mobileno}   placeholder="Mobile number" onChange={ this.handlechange} />
                         </div>
-                    </div>
+                    </div> 
                     <br/>
                     </div>   
-                    <input id="submmit" type="submit" value="Submit" onClick={this.handlesubmit} />
-                    <input id="Restart" type="reset" value="Reset"/>
+                    <input id="submmit" type="button" value="Submit" onClick={this.handlesubmit} />
+                    <input id="Restart" type="reset" value="Reset" onClick={this.handlereset} />
                     </form>
             </React.Fragment>
         )

@@ -2,28 +2,34 @@ import React from 'react' ;
 import './donarlist.css' 
 const Donarlist = (props) =>{
     const Booking = ({Listing}) =>{
-        if(Listing){
-            return Listing.map((item) => {
-                return(
-                    <tr>
-                    {/* <td> {item._id} </td> */}
-                    <td> {item.name} </td>
-                    {/* <td> {item.gender} </td> */}
-                    <td> {item.DOB} </td>
-                    <td> {item.bloodgroup} </td>
-                    <td> {item.weight} </td>
-                    <td> {item.area} </td>
-                    <td> {item.mobileno} </td>
-                </tr>
-                )
-            })
-        }else{
+        if(Listing.length<=0){
             return(
-                <div>
-                    <img src="/image/loader.gif"/>
-                </div>
+               <tr> <td colSpan="6"> <h3> Donar not available  </h3> </td>  </tr>
             )
+        } else{
+            if(Listing){
+                return Listing.map((item) => {
+                    return(
+                        <tr>
+                        <td> {item.name} </td>
+                        <td> {item.DOB} </td>
+                        <td> {item.bloodgroup} </td>
+                        <td> {item.weight} </td>
+                        <td> {item.area} </td>
+                        <td> {item.mobileno} </td>
+                    </tr>
+                    )
+                })
+            }else{
+                return(
+                    <div>
+                        <img src="/image/loader.gif"/>
+                    </div>
+                )
+            }
         }
+        
+       
     } 
         return(
             <React.Fragment>
