@@ -1,0 +1,14 @@
+.jumbotron{
+    text-align: center;
+}
+
+#tabledessign{
+    border: 2px solid black;
+}
+
+.optionstyle{
+    padding: 10px  30px;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
