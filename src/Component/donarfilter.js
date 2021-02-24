@@ -26,7 +26,7 @@ class Donarfilter extends React.Component {
        
      }        
 
-    render(){
+    render(){    
         return(
             <div className="groupfilter" onChange={this.Groupfilter} >
                 <h2 id="bloodfilterheading" > Blood Group </h2>  
