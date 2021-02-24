@@ -8,7 +8,21 @@
 
 .optionstyle{
     padding: 10px  30px;
-    font-size: 15px;
+    font-size: 25px;
     color: black;
     font-weight: bold;
+}
+
+#contacttext{
+    text-align: center;
+    color: rgb(204, 71, 71);
+    background-color: rgb(180, 178, 178);
+    padding: 2px;
+}
+
+
+@media screen and (max-width:620px){
+    .optionstyle{
+        font-size: 15px;
+    }
 }

@@ -1,12 +1,14 @@
 import React from 'react'
 import './searchdonar.css' 
 const url = "https://blood-donr.herokuapp.com/group"
+const rurl = "https://blood-donr.herokuapp.com/register"
 class Searchdonar extends React.Component {
         constructor(){
             super()
 
                 this.state = {
-                    bloodtype: ''
+                    bloodtype: '' ,
+                    donar: ''
                 }
         }
             
@@ -15,7 +17,7 @@ class Searchdonar extends React.Component {
                     return data.map((item) => {
                         console.log(item.Blood_Group)
                         return(
-                            <option value= {item.Blood_Group} > {item.Blood_Group} </option>
+                            <option value= {item.Blood_Group}>{item.Blood_Group} </option>
                         )
                     })
                 }else{
@@ -23,14 +25,48 @@ class Searchdonar extends React.Component {
                 }
          }
 
+         handlesearch = (event) =>{
+            fetch(`${rurl}/${event.target.value}`,{method:'GET'})
+            .then((res)=> res.json())
+            .then((data) => { 
+                // console.log(data) 
+                this.setState({donar:data})
+            })
+         }
+
+        smile = (data) => {
+            // if(data.length<=0){
+            //     return(
+            //        <tr> <td colSpan="5"> <h3> Donar not available  </h3> </td>  </tr>
+            //     )
+            // }else {
+                if(data){
+                    return data.map((item) => {
+                        return(
+                            <tr>
+                                <td> {item.name} </td>
+                                <td> {item.DOB} </td>
+                                <td> {item.bloodgroup} </td>
+                                {/* <td> {item.weight} </td> */}
+                                <td> {item.area} </td>
+                                <td> {item.mobileno} </td>
+                            </tr>
+                           
+                        )
+                    })
+                }
+            // }
+         }
+           
     render(){
         
         // console.log(this.state.bloodtype)
         return (
             <div className="container">
+                <h2 id="contacttext">   Select your require blood type and connect to an available donar  </h2> 
                 <div className="jumbotron">
-                    <select  className ="optionstyle">
-                        <option  selected disabled > Select Blood Group which you require </option>
+                    <select  className ="optionstyle" onChange={this.handlesearch}>
+                        <option value=""  selected disabled > Select Blood Group which you require </option>
                         {this.rendergroup(this.state.bloodtype)}
                     </select> 
                 </div> 
@@ -44,10 +80,11 @@ class Searchdonar extends React.Component {
                             <th> Name </th>
                             <th> DOB </th>
                             <th> Bloodgroup </th>
-                            <th> Weight </th>
+                            {/* <th> Weight </th> */}
                             <th> Area </th>
                             <th> Mobileno </th>
                             </tr>
+                            {this.smile(this.state.donar)}
                         </thead>
                         <tbody>
                              
