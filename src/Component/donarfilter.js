@@ -24,7 +24,7 @@ class Donarfilter extends React.Component {
            
         })
        
-     }
+     }        
 
     render(){
         return(
