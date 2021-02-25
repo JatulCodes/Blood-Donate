@@ -1,10 +1,43 @@
 import React from 'react' 
 import './postregister.css'
 
+const url = "https://blood-donr.herokuapp.com/delete"
+
 const Postrequire = (props) => {
     const Booking = ({Listing}) =>{
         if(Listing){
             return Listing.map((item) => {
+                // var objDate = new Date() 
+                // year, month, day
+                var dateObj = new Date();
+                var currentDate = dateObj.getDate();
+                var currentYear = dateObj.getFullYear();
+                var currentMonth = dateObj.getMonth();
+                currentMonth++ ;
+                var beforeDate = item.requirementbefore.split('-')
+                if (currentYear >= Number(beforeDate[0])){ 
+                    // alert(dateObj) 
+                   if(currentMonth >= Number(beforeDate[1])){ 
+                       if(currentMonth>Number(beforeDate[1])){
+
+                       }
+                    // alert(">>>>>>>>> month",currentMonth,Number(beforeDate[1]))
+                       if(currentDate > Number(beforeDate[2])){   
+                        //    alert(">>>>>>>>> date",currentDate , Number(beforeDate[2]))
+                        fetch(`${url}/${item._id}`,
+                            { 
+                                method:'DELETE',
+                                headers:{
+                                    'Accept':'application/json',
+                                    'Content-Type':'application/json'
+                                }
+                            })
+                       } 
+                   }
+                } 
+                console.log("year",currentYear)
+                console.log("no",Number(beforeDate[0]))
+                
                 return(
                     <tr>
                     <td> {item.bloodgroup} </td>

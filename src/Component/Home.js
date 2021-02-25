@@ -6,7 +6,6 @@ const Home = () => {
         <div>
             <img id="image" src="./image/third.jpg" alt="icon"/>
             <div class="container" >
-           
                <Link to="/Home/post" ><h1 className="postheading" > POST YOUR REQUIREMENT </h1> </Link> 
                 <div class="panel panel-info">
                     <div class="panel-heading">Benefits</div>
