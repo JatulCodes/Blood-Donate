@@ -24,7 +24,7 @@ const Navbar =() => {
                     <li><Link to="/Searchdonar"> SEARCH DONAR</Link></li>
                     <li><Link to="/bookinglist"> DONAR LIST </Link></li>
                     <li><Link to="/Bloodrequired"> BLOOD REQUIRED </Link></li> 
-                   <li> <Change/> </li> 
+                    <li> <Change/> </li> 
                 </ul>
                 </div> 
             </div>

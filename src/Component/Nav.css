@@ -4,17 +4,28 @@ body{
     } 
 .dark{
     background-color: black;
-    color:gray
+    color:gray 
 }
- /* #btnmood{
-     color: red;
- }    */
+ 
+.darkfootr{
+    background-color: white;
+    color: black;
+}
+
+/* .postbackground{
+    background-color: black;
+} */
+
+ #idforchngmood{
+   margin-top: 10px;
+   margin-left: 10px;
+   border: none;
+   background-color: black;
+ }
 
  .glyphicon-adjust{
-     font-size: 15px;
-     padding: 5px;
-     color: red;
-     padding-top: 10px;
-     /* background-color: black; */
-     /* margin-top: 5px; */
+     font-size: 20px;
+     border: none;
+     background-color: white;
+     color: rgb(17, 17, 17);
  }

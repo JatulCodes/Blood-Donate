@@ -15,22 +15,20 @@ class Register extends React.Component {
                 area:'',
                 mobileno:''
             }
-    }
+    } 
     handlesubmit=() => {
         var dateObj = new Date();
         var currentYear = dateObj.getFullYear();
-        var DOB = this.state.DOB.split('-')
-        var Year = Number(DOB[0])
-        alert("cy>>>",currentYear)
-        console.log("ye",Year)
+        var DOB = this.state.DOB.split('-') 
+        var Year = Number(DOB[0]) 
         if(this.state.name==''||this.state.DOB ==''||this.state.bloodgroup ==''||this.state.weight ==''||this.state.area ==''||this.state.mobileno ==''){
             alert("All filds are required")
-        }
-        else if(currentYear-Year>=18){
+        } 
+        else if(currentYear-Year<18){
             alert("You are not eligibile for blood donate you should be 18 year")
-        }
+        } 
          else{
-            if(this.state.mobileno.length==10){
+            if(this.state.mobileno.length==10){ 
                 console.log(this.state)
                 fetch( url,
                     {

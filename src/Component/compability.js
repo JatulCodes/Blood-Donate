@@ -225,7 +225,7 @@ const Comp = () => {
                             </tr>   
                             <tr>
                                 <td class="edittable">
-                                    AB-
+                                    AB+
                                 </td>
                                 <td>
                                     O-

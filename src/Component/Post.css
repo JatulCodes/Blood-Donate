@@ -3,6 +3,10 @@
     margin-top: 2%;
 }
 
+#set{
+    background-color: rgb(252, 243, 243);
+}
+
 .btn-lg{
     margin: auto;
 }

@@ -12,18 +12,6 @@ const Postrequire = (props) => {
         } 
         else if(Listing){
             return Listing.map((item) => {
-                // var objDate = new Date() 
-                // year, month, day
-                // var dateObj = new Date(); 
-                // var currentDate = dateObj.getDate();
-                // var currentYear = dateObj.getFullYear();
-                // var currentMonth = dateObj.getMonth();
-                // currentMonth++;
-                // var beforeDate = item.requirementbefore.split('-')
-                // var beforeYear = Number(beforeDate[0]);
-                // var beforeMonth = Number(beforeDate[1]);
-                // var beforeDate = Number(beforeDate[2]);
-
                 var dateObj = new Date();
                 var currentDate = dateObj.getDate();
                 var currentYear = dateObj.getFullYear();
@@ -33,11 +21,9 @@ const Postrequire = (props) => {
                 var beforeYear = Number(beforeDate[0]);
                 var beforeMonth = Number(beforeDate[1]);
                 var beforeDate = Number(beforeDate[2]);
-                if (currentYear >= Number(beforeDate[0])){ 
-                    // alert(dateObj) 
-                   if(currentMonth >= beforeYear){ 
-                       if(currentMonth >= beforeMonth){
-                        if(currentMonth > beforeMonth){
+                if (currentYear >= beforeYear){   
+                   if(currentMonth >= beforeMonth){ 
+                       if(currentMonth > beforeMonth){
                             fetch(`${url}/${item._id}`,
                                 { 
                                     method:'DELETE',
@@ -45,40 +31,25 @@ const Postrequire = (props) => {
                                         'Accept':'application/json',
                                         'Content-Type':'application/json'
                                     }
-                                }) 
-                            } 
-                                else{
-                                    if(currentDate>beforeDate){
-                                        fetch(`${url}/${item._id}`,
-                                        { 
-                                            method:'DELETE',
-                                            headers:{
-                                                'Accept':'application/json',
-                                                'Content-Type':'application/json'
-                                            }
-                                        })
+                                })   
+                       } 
+                       else{ 
+                            if(currentDate>=beforeDate){
+                                fetch(`${url}/${item._id}`,
+                                { 
+                                    method:'DELETE',
+                                    headers:{
+                                        'Accept':'application/json',
+                                        'Content-Type':'application/json'
                                     }
-                                }   
-                        
+                                })
+                            }
                        }
+                       
                     }     
-                    // alert(">>>>>>>>> month",currentMonth,Number(beforeDate[1]))
-                    //    if(currentDate > Number(beforeDate[2])){   
-                        //    alert(">>>>>>>>> date",currentDate , Number(beforeDate[2]))
-                //         fetch(`${url}/${item._id}`,
-                //             { 
-                //                 method:'DELETE',
-                //                 headers:{
-                //                     'Accept':'application/json',
-                //                     'Content-Type':'application/json'
-                //                 }
-                //             })
-                //        } 
-                //    }
+                   //month cndition end///
                 } 
-                console.log("year",currentYear)
-                console.log("no",Number(beforeDate[0]))
-                
+                //year condition close//
                 return(
                     <tr>
                     <td> {item.bloodgroup} </td>

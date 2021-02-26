@@ -60,9 +60,8 @@ class Postdisply extends React.Component {
         return(
             <React.Fragment>
                  <form>
-                 <div class="container"  id="form" className="row">
+                <div class="container"  id="form" className="row">
                     <h2> <center> Post Your Requirement </center> </h2>
-                   
                     <div className="col-md-4 col-sm-4 col-xs-4" id="form1">        
                         <div class="form-group">
                             <label> Blood Group </label>
@@ -93,28 +92,30 @@ class Postdisply extends React.Component {
                         <div class="form-group">
                             <label> Hospital Name </label>
                             <input type="text" autoComplete="off" class="form-control" name="hospitalname" value={this.state.hospitalname}  placeholder=" Hospital Name" onChange={ this.handlechange} />
-                        </div>
-                        
+                        </div>     
                     </div>
                     <div className="col-md-4 col-sm-4 col-xs-4" id="form2" >
                     <div class="form-group">
-                            <label> Patient Name </label>
-                            <input type="text" autoComplete="off" name="patientname" value={this.state.patientname}  placeholder="Patient Name"  class="form-control" onChange={ this.handlechange}/>
-                        </div>
-                        <div class="form-group">
-                            <label> Patient Age </label>
-                            <input type="number" autoComplete="off" class="form-control" name="patientage"  value={this.state.patientage}  placeholder="Patient age" onChange={ this.handlechange} />
-                        </div> 
-                        <div class="form-group">
-                            <label> Mobile no </label>
-                            <input type="number" autoComplete="off" class="form-control" name="mobileno" value={this.state.mobileno}   placeholder="Mobile number" onChange={ this.handlechange} />
-                        </div>
+                        <label> Patient Name </label>
+                        <input type="text" autoComplete="off" name="patientname" value={this.state.patientname}  placeholder="Patient Name"  class="form-control" onChange={ this.handlechange}/>
+                    </div>
+                    <div class="form-group">
+                        <label> Patient Age </label>
+                        <input type="number" autoComplete="off" class="form-control" name="patientage"  value={this.state.patientage}  placeholder="Patient age" onChange={ this.handlechange} />
                     </div> 
+                    <div class="form-group">
+                        <label> Mobile no </label>
+                        <input type="number" autoComplete="off" class="form-control" name="mobileno" value={this.state.mobileno}   placeholder="Mobile number" onChange={ this.handlechange} />
+                    </div>
+                </div> 
                     <br/>
-                    </div>   
+                </div>  
+                <div id="set"> 
                     <input id="submmit" type="button" value="Submit" onClick={this.handlesubmit} />
                     <input id="Restart" type="reset" value="Reset" onClick={this.handlereset} />
-                    </form>
+                </div> 
+                
+                </form>
             </React.Fragment>
         )
     }
