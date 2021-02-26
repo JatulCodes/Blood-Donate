@@ -5,35 +5,76 @@ const url = "https://blood-donr.herokuapp.com/delete"
 
 const Postrequire = (props) => {
     const Booking = ({Listing}) =>{
-        if(Listing){
+        if(Listing.length<=0){
+            return(
+               <tr> <td colSpan="8"> <h3> No Requirement </h3> </td>  </tr>
+            )
+        } 
+        else if(Listing){
             return Listing.map((item) => {
                 // var objDate = new Date() 
                 // year, month, day
+                // var dateObj = new Date(); 
+                // var currentDate = dateObj.getDate();
+                // var currentYear = dateObj.getFullYear();
+                // var currentMonth = dateObj.getMonth();
+                // currentMonth++;
+                // var beforeDate = item.requirementbefore.split('-')
+                // var beforeYear = Number(beforeDate[0]);
+                // var beforeMonth = Number(beforeDate[1]);
+                // var beforeDate = Number(beforeDate[2]);
+
                 var dateObj = new Date();
                 var currentDate = dateObj.getDate();
                 var currentYear = dateObj.getFullYear();
                 var currentMonth = dateObj.getMonth();
                 currentMonth++ ;
                 var beforeDate = item.requirementbefore.split('-')
+                var beforeYear = Number(beforeDate[0]);
+                var beforeMonth = Number(beforeDate[1]);
+                var beforeDate = Number(beforeDate[2]);
                 if (currentYear >= Number(beforeDate[0])){ 
                     // alert(dateObj) 
-                   if(currentMonth >= Number(beforeDate[1])){ 
-                       if(currentMonth>Number(beforeDate[1])){
-
+                   if(currentMonth >= beforeYear){ 
+                       if(currentMonth >= beforeMonth){
+                        if(currentMonth > beforeMonth){
+                            fetch(`${url}/${item._id}`,
+                                { 
+                                    method:'DELETE',
+                                    headers:{
+                                        'Accept':'application/json',
+                                        'Content-Type':'application/json'
+                                    }
+                                }) 
+                            } 
+                                else{
+                                    if(currentDate>beforeDate){
+                                        fetch(`${url}/${item._id}`,
+                                        { 
+                                            method:'DELETE',
+                                            headers:{
+                                                'Accept':'application/json',
+                                                'Content-Type':'application/json'
+                                            }
+                                        })
+                                    }
+                                }   
+                        
                        }
+                    }     
                     // alert(">>>>>>>>> month",currentMonth,Number(beforeDate[1]))
-                       if(currentDate > Number(beforeDate[2])){   
+                    //    if(currentDate > Number(beforeDate[2])){   
                         //    alert(">>>>>>>>> date",currentDate , Number(beforeDate[2]))
-                        fetch(`${url}/${item._id}`,
-                            { 
-                                method:'DELETE',
-                                headers:{
-                                    'Accept':'application/json',
-                                    'Content-Type':'application/json'
-                                }
-                            })
-                       } 
-                   }
+                //         fetch(`${url}/${item._id}`,
+                //             { 
+                //                 method:'DELETE',
+                //                 headers:{
+                //                     'Accept':'application/json',
+                //                     'Content-Type':'application/json'
+                //                 }
+                //             })
+                //        } 
+                //    }
                 } 
                 console.log("year",currentYear)
                 console.log("no",Number(beforeDate[0]))
