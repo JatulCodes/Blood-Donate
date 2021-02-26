@@ -7,7 +7,7 @@ const mode=()=>{
 
 const Change = () => {
     return (
-        <button onClick={mode()}>Change Mode</button>
+        <button onClick={mode()}><span class="glyphicon glyphicon-adjust"></span></button>
     )
 }
 

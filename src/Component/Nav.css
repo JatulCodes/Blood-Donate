@@ -1,11 +1,20 @@
-/* body{
+body{
         background-color: white;
         color:black
-    }
-    .dark{
-        background-color: black;
-        color:gray
-    }
- #btnmood{
+    } 
+.dark{
+    background-color: black;
+    color:gray
+}
+ /* #btnmood{
      color: red;
  }    */
+
+ .glyphicon-adjust{
+     font-size: 15px;
+     padding: 5px;
+     color: red;
+     padding-top: 10px;
+     /* background-color: black; */
+     /* margin-top: 5px; */
+ }
