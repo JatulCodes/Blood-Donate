@@ -4,7 +4,11 @@ import './home.css'
 const Home = () => {
     return (
         <div>
-            <img id="image" src="./image/third.jpg" alt="icon"/>
+            <div>
+                 <img id="image" src="./image/smm.jpeg" alt="icon"/> 
+                 {/* <p  id="piccadd"> Donate blood and be the reason of smile to many faces </p>  */}
+            </div>
+            
             <div class="container" >
                <Link to="/Home/post" ><h1 className="postheading" > POST YOUR REQUIREMENT </h1> </Link> 
                 <div class="panel panel-info">
