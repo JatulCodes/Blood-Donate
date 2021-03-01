@@ -13,7 +13,9 @@ class Register extends React.Component {
                 bloodgroup:'',
                 weight:'',
                 area:'',
-                mobileno:''
+                mobileno:'',
+                selectquestion:'',
+                answer:''
             }
     } 
     handlesubmit=() => {
@@ -21,7 +23,7 @@ class Register extends React.Component {
         var currentYear = dateObj.getFullYear();
         var DOB = this.state.DOB.split('-') 
         var Year = Number(DOB[0]) 
-        if(this.state.name==''||this.state.DOB ==''||this.state.bloodgroup ==''||this.state.weight ==''||this.state.area ==''||this.state.mobileno ==''){
+        if(this.state.name==''||this.state.DOB ==''||this.state.bloodgroup ==''||this.state.weight ==''||this.state.area ==''||this.state.mobileno ==''||this.state.selectquestion ==''||this.state. answer ==''){
             alert("All filds are required")
         } 
         else if(currentYear-Year<18){
@@ -82,7 +84,6 @@ class Register extends React.Component {
                          <option> O+ </option>
                          <option> O- </option>
                      </select>
-                 
                  </div>
                  <div class="form-group">
                      <label> weight </label>
@@ -96,6 +97,19 @@ class Register extends React.Component {
                  <div class="form-group">
                      <label> Mobile no </label>
                      <input type="number" name="mobileno" value={this.state.mobileno} class="form-control" placeholder="Mobile number" autoComplete="off" required  onChange={ this.handlechange} />
+                 </div> 
+                 <div class="form-group"> 
+                     <label> Select question </label> 
+                     <select class="form-control" name="selectquestion" value={this.state.selectquestion} autoComplete="off" required  onChange={ this.handlechange} >
+                         <option  selected > Select question </option> 
+                         <option> What is your favourite five digits.... </option> 
+                         <option> What is your friend name... </option> 
+                         <option> What is your favourite book name... </option> 
+                     </select>
+                 </div> 
+                 <div class="form-group">
+                     <label> Answer the question  </label>
+                     <input type="text" name="answer" value={this.state.answer} class="form-control" placeholder="Answer the question for any change after register.... " autoComplete="off" required  onChange={ this.handlechange} />
                  </div>
                  <div>
                      <input class="btn btn-success btn btn-lg" id="submitt" type="submit"  onClick={this.handlesubmit} />

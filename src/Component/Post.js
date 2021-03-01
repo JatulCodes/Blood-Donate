@@ -38,7 +38,7 @@ class Postdisply extends React.Component {
                 alert("Enter right phone no")
             }
         
-         }
+        }
     }
 
     handlereset = () => {

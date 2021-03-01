@@ -44,7 +44,7 @@ class Searchdonar extends React.Component {
                     return data.map((item) => {
                         return(
                             <tr>
-                                <td> {item.name} </td>
+                                {/* <td> {item.name} </td> */}
                                 <td> {item.DOB} </td>
                                 <td> {item.bloodgroup} </td>
                                 {/* <td> {item.weight} </td> */}
@@ -77,7 +77,7 @@ class Searchdonar extends React.Component {
                         <thead>
                             <tr>
                             {/* <th> OrderId </th> */}
-                            <th> Name </th>
+                            {/* <th> Name </th> */}
                             <th> DOB </th>
                             <th> Bloodgroup </th>
                             {/* <th> Weight </th> */}

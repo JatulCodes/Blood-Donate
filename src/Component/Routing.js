@@ -12,7 +12,7 @@ import Navbar from './Nav'
 import Postdisply from './Post'
 import Donarapi from './donarapi'
 import Requireapi from './postregisterlistapi'
-
+import Deldonar from './delete'
 const Routing = () => {
     return(
        
@@ -30,6 +30,7 @@ const Routing = () => {
                 <Route  path ='/Searchdonar' component={Searchdonar}/> 
                 <Route  path ='/bookinglist' component={Donarapi}/> 
                 <Route  path ='/Bloodrequired' component={Requireapi}/> 
+                <Route  path ='/del' component={Deldonar}/> 
                 <Footer/>
             </div>
             </BrowserRouter>

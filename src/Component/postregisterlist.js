@@ -4,13 +4,9 @@ import './postregister.css'
 const url = "https://blood-donr.herokuapp.com/delete"
 
 const Postrequire = (props) => {
-    const Booking = ({Listing}) =>{
-        if(Listing.length<=0){
-            return(
-               <tr> <td colSpan="8"> <h3> No Requirement </h3> </td>  </tr>
-            )
-        } 
-        else if(Listing){
+    const Booking = ({Listing}) =>{ 
+        if(Listing){
+        if(Listing.length>0){
             return Listing.map((item) => {
                 var dateObj = new Date();
                 var currentDate = dateObj.getDate();
@@ -22,8 +18,8 @@ const Postrequire = (props) => {
                 var beforeMonth = Number(beforeDate[1]);
                 var beforeDate = Number(beforeDate[2]);
                 if (currentYear >= beforeYear){   
-                   if(currentMonth >= beforeMonth){ 
-                       if(currentMonth > beforeMonth){
+                if(currentMonth >= beforeMonth){ 
+                    if(currentMonth > beforeMonth){
                             fetch(`${url}/${item._id}`,
                                 { 
                                     method:'DELETE',
@@ -32,8 +28,8 @@ const Postrequire = (props) => {
                                         'Content-Type':'application/json'
                                     }
                                 })   
-                       } 
-                       else{ 
+                    } 
+                    else{ 
                             if(currentDate>=beforeDate){
                                 fetch(`${url}/${item._id}`,
                                 { 
@@ -44,10 +40,10 @@ const Postrequire = (props) => {
                                     }
                                 })
                             }
-                       }
-                       
+                    }
+                    
                     }     
-                   //month cndition end///
+                //month cndition end///
                 } 
                 //year condition close//
                 return(
@@ -63,14 +59,22 @@ const Postrequire = (props) => {
                 </tr>
                 )
             })
-        }else{
+        } 
+        else{
             return(
-                <div>
-                    <img src="/image/loader.gif"/>
-                </div>
+                <tr> <td colSpan="8"> <h3> No Requirement </h3> </td>  </tr>
             )
         }
-    }  
+    }
+    else{
+        return(
+            <div>
+                <img src="/image/loader.gif"/>
+            </div>
+        )
+    }
+}  
+
     return(
         <React.Fragment>
             <div className="container">
