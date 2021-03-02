@@ -14,7 +14,7 @@ const Donarlist = (props) =>{
                         <td> {item.weight} </td>
                         <td> {item.area} </td>
                         <td> <input type="button" id="editdonar"  value="Edit"/> </td>
-                        <Link to="/del"> <td> <input type="button" id="deletedonar" value="Delete"/> </td>  </Link> 
+                        <Link to={`del/${item._id}`}> <td> <input type="button" id="deletedonar"  value="Delete"/> </td>  </Link> 
                     </tr>
                     )
                 })

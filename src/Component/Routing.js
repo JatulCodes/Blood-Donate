@@ -30,7 +30,7 @@ const Routing = () => {
                 <Route  path ='/Searchdonar' component={Searchdonar}/> 
                 <Route  path ='/bookinglist' component={Donarapi}/> 
                 <Route  path ='/Bloodrequired' component={Requireapi}/> 
-                <Route  path ='/del' component={Deldonar}/> 
+                <Route  path ='/del/:id' component={Deldonar}/> 
                 <Footer/>
             </div>
             </BrowserRouter>

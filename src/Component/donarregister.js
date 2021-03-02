@@ -102,7 +102,7 @@ class Register extends React.Component {
                      <label> Select question </label> 
                      <select class="form-control" name="selectquestion" value={this.state.selectquestion} autoComplete="off" required  onChange={ this.handlechange} >
                          <option  selected > Select question </option> 
-                         <option> What is your favourite five digits.... </option> 
+                         <option> What is your favourite digits.... </option> 
                          <option> What is your friend name... </option> 
                          <option> What is your favourite book name... </option> 
                      </select>
