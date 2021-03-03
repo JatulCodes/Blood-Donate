@@ -40,15 +40,8 @@
 
 #deletedonar{
     color: white;
-    background-color: red;
-    border: 2px solid black;
-    padding: 5px;
-}
-
-#editdonar{
-    color: white;
-    background-color: green;
-    border: 2px solid black;
+    background-color: rgb(250, 109, 109);
+    /* border: 2px solid black; */
     padding: 5px;
 }
 

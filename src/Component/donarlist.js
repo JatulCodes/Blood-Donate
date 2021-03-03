@@ -13,7 +13,6 @@ const Donarlist = (props) =>{
                         <td> {item.bloodgroup} </td>
                         <td> {item.weight} </td>
                         <td> {item.area} </td>
-                        <td> <input type="button" id="editdonar"  value="Edit"/> </td>
                         <Link to={`del/${item._id}`}> <td> <input type="button" id="deletedonar"  value="Delete"/> </td>  </Link> 
                     </tr>
                     )
@@ -21,7 +20,7 @@ const Donarlist = (props) =>{
             }
             else{
                 return(
-                    <tr> <td colSpan="7"> <h3> Donar Not Available </h3> </td>  </tr>
+                    <tr> <td colSpan="6"> <h3> Donar Not Available </h3> </td>  </tr>
                 )
             }
         }
@@ -47,7 +46,6 @@ const Donarlist = (props) =>{
                                 <th> Bloodgroup </th>
                                 <th> Weight </th>
                                 <th> Area </th>
-                                <th> Edit Donar </th>
                                 {/* <th> Mobileno </th> */}
                                 <th> Delete Donar </th>
                                 </tr>

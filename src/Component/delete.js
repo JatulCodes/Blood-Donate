@@ -26,13 +26,15 @@ const url = "https://blood-donr.herokuapp.com/deleteregister"
                 },
                 body:JSON.stringify(this.state)
             }) 
-            .then((res) => { 
-                 return res.json()
-            }) 
-            .then((data) => { 
-                console.log(data)
-                this.props.history.push('/bookinglist')
-            }) 
+            alert("If you enter right information then your registration is successfully deleted...")
+            this.props.history.push('/bookinglist')
+            // .then((res) => { 
+            //      return res.json()
+            // }) 
+            // .then((data) => { 
+            //     console.log(data)
+            //     this.props.history.push('/bookinglist')
+            // }) 
         }
     render(){ 
         return(
