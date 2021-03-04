@@ -29,24 +29,15 @@ class Header extends React.Component{
             <React.Fragment>
             <header id="headd">
                 <div className="row" id="rowdesign"> 
-                    <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12"> 
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4"> 
                         <p id="edit"> Donate Blood And Be The Reason Of Smile To Many Faces..... </p>
                     </div>
-                    <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <img id="image2" src="./image/cc.png" width="10%" alt="icon"/>
                     </div>
-                    <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <p className="active"> Active Donars <br/>  <p id="donars" > {this.Activedonar(this.state.donars)}  </p> </p>
                     </div>
-                    {/* <div className=" col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                        <img id="image1" src="./image/aa.png" width="10%" alt="icon"/>
-                    </div> */}
-                    
-                    
-                    
-                    {/* <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                        <p id="edit1" > Donate blood and be a  hero of someone's life </p> 
-                    </div> */}
                 </div> 
             </header> 
         </React.Fragment>

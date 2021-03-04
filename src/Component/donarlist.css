@@ -19,7 +19,7 @@
 #donartable{
     width: 50%;
     /* margin-right: 15%; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
     /* float:right */
     margin: auto;
 }
@@ -43,6 +43,11 @@
     background-color: rgb(250, 109, 109);
     /* border: 2px solid black; */
     padding: 5px;
+}
+
+#deletedonar:hover{
+    font-size: 20px;
+    /* border-radius: 10px; */
 }
 
 @media screen and (max-width:845px){

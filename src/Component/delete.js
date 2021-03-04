@@ -26,7 +26,7 @@ const url = "https://blood-donr.herokuapp.com/deleteregister"
                 },
                 body:JSON.stringify(this.state)
             }) 
-            alert("If you enter right information then your registration is successfully deleted...")
+            alert("If you enter right information then your registration is successfully ")
             this.props.history.push('/bookinglist')
             // .then((res) => { 
             //      return res.json()

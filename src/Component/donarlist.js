@@ -36,16 +36,16 @@ const Donarlist = (props) =>{
             <React.Fragment>
                 <div className="container" id="tabledesign">
                         <h3>   Donar  List   </h3>
-                        <table className="table" id="donartable">
+                        <table className="table  table-bordered table-hover" id="donartable">
                             <thead>
-                                <tr>
+                                <tr  class="bg-warning">
                                 {/* <th> OrderId </th> */}
                                 <th> Name </th>
                                 {/* <th> Gender </th> */}
                                 <th> DOB </th>
                                 <th> Bloodgroup </th>
                                 <th> Weight </th>
-                                <th> Area </th>
+                                <th> Address </th>
                                 {/* <th> Mobileno </th> */}
                                 <th> Delete Donar </th>
                                 </tr>

@@ -7,8 +7,6 @@ const url = "https://blood-donr.herokuapp.com/register"
 class Donarfilter extends React.Component {
     constructor(props){
         super(props) 
-
-
     } 
      Groupfilter = (event) => {
       
@@ -37,19 +35,19 @@ class Donarfilter extends React.Component {
                 <label> <input type="radio" value="A+" name="group"/> 
                     A+
                 </label><br/>
-                <label>  <input type="radio" value=" A-" name="group"/> 
+                <label>  <input type="radio" value="A-" name="group"/> 
                     A-
                 </label> <br/>
-                <label> <input type="radio" value=" B+" name="group"/>
+                <label> <input type="radio" value="B+" name="group"/>
                     B+
                 </label> <br/>
-                <label> <input type="radio" value=" B-" name="group"/>
+                <label> <input type="radio" value="B-" name="group"/>
                     B- 
                 </label> <br/>
                 <label> <input type="radio" value="AB+" name="group"/> 
                     AB+
                 </label> <br/>
-                <label> <input type="radio" value=" AB-" name="group"/> 
+                <label> <input type="radio" value="AB-" name="group"/> 
                     AB-
                 </label> <br/>
                 <label> <input type="radio" value="O+" name="group"/> 

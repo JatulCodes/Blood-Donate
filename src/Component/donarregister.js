@@ -91,7 +91,7 @@ class Register extends React.Component {
                      
                  </div>
                  <div class="form-group">
-                     <label> Area </label>
+                     <label> Address </label>
                      <input type="text" name="area" value={this.state.area} class="form-control" placeholder="Enter Area" autoComplete="off" required  onChange={ this.handlechange} />
                  </div>
                  <div class="form-group">

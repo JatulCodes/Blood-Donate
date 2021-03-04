@@ -79,9 +79,9 @@ const Postrequire = (props) => {
         <React.Fragment>
             <div className="container">
                 <h2> <center> FOLLOWING BLOOD REQUIRED</center>  </h2>
-                        <table className="table" id="donarrtable">
-                            <thead>
-                                <tr>
+                        <table className="table table-bordered table-hover" id="donarrtable">
+                            <thead class="bg-warning">
+                                <tr >
                                 <th> Blood Group </th>
                                 <th> No of Units </th>
                                 <th> Reason for Requirement </th>

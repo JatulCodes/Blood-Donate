@@ -10,7 +10,7 @@ const Home = () => {
             </div>
             
             <div class="container" >
-               <Link to="/Home/post" ><h1 className="postheading" > POST YOUR REQUIREMENT </h1> </Link> 
+               <Link to="/Home/post" ><h1 className="postheading"> POST YOUR REQUIREMENT </h1> </Link> 
                 <div class="panel panel-info">
                     <div class="panel-heading">Benefits</div>
                     <div class="panel-body">
