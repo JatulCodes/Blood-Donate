@@ -12,16 +12,10 @@ body{
     color: black;
 }
 
-
-/* .postbackground{
-    background-color: black;
-} */
-
  #idforchngmood{
    margin-top: 10px;
    margin-left: 10px;
    border: none;
-   /* background-color: inverse; */
  }
 
  .glyphicon-adjust{

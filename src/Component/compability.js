@@ -6,7 +6,7 @@ const Comp = () => {
               <div class="container" >
               <img id="image" src="./image/list.gif" alt="icon"/>
               <h2 className="tableheading" > Red Blood cell compatibility Table </h2>
-                    <table class="table" id="firsttable">
+                    <table class="table table-bordered table-hover" id="firsttable">
                         <thead>
                             <tr>
                                 <th>
@@ -255,7 +255,7 @@ const Comp = () => {
                         </tbody>
                     </table>
               <h4 className="tableheading2" > Plasma compatibility Table </h4>
-                    <table class="table" id="secondtable">
+                    <table class="table table-bordered table-hover" id="secondtable">
                         <thead>
                             <tr>
                                 <th>

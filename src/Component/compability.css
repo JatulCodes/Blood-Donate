@@ -7,14 +7,14 @@
     width: 45%;
     margin: auto;
     font-size: 15px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 .table td{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     text-align: center;
 } 
 .table th {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     text-align: center;
 }
 .edittable{
@@ -30,7 +30,7 @@
     margin: auto;
     margin-bottom: 2%;
     font-size: 15px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 #groupimage{
     margin-left: 15% ;

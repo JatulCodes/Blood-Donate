@@ -69,7 +69,7 @@ class Register extends React.Component {
                  </div> 
                  <div class="form-group">
                      <label> Date Of Birth </label>
-                     <input type="date" name="DOB" value={this.state.DOB} autoComplete="off" required  class="form-control" onChange={ this.handlechange} />
+                     <input type="date" name="DOB" value={this.state.DOB} autoComplete="off" required  class="form-control" placeholder="mm/dd/yyyy" onChange={ this.handlechange} />
                  </div> 
                  <div class="form-group">
                      <label> Blood Group </label>
