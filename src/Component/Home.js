@@ -6,7 +6,6 @@ const Home = () => {
         <div>
             <div>
                  <img id="image" src="./image/smm.jpeg" alt="icon"/> 
-                 {/* <p  id="piccadd"> Donate blood and be the reason of smile to many faces </p>  */}
             </div>
             
             <div class="container" >
@@ -35,11 +34,9 @@ const Home = () => {
                     <p> Every year our nation requires about 4 Crore units of blood </p>
                     <p> Out of which only a meager 5 Lakh units of blood are available
                     </p>
-                </div>
+                </div> 
                 <iframe width="100%" height="500" id="vediodesign" src="https://www.youtube.com/embed/-1O4jlEhsxU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>   
-           
-            {/* <iframe height="400" width="400" src="https://www.youtube.com/watch?v=-1O4jlEhsxU" ></iframe>          */}
         </div>  
         
     )

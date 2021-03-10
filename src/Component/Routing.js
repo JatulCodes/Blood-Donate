@@ -15,7 +15,6 @@ import Requireapi from './postregisterlistapi'
 import Deldonar from './delete'
 const Routing = () => {
     return(
-       
             <BrowserRouter>
              <div>
                 <Navbar/>

@@ -15,13 +15,10 @@ class Header extends React.Component{
             return(
                 <>
                  {data.length} 
-                
                 </>
-
             )
-           
         }else{
-            <span> connection Fail </span>
+            <span> Please connct to internet </span>
         }
  } 
     render(){

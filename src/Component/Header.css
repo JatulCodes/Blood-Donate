@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-size: 15px; */
 }
 
 #headd{
@@ -24,13 +23,6 @@
    
 }
 
-/* #image1{
-    width: 180px;
-    height: 180px;
-    margin-top:  20px;
-    margin-bottom: 20px;
-    margin-left: 10%;
-}  */
 #image2{
     margin-top:  20px;
     margin-left: 30%;
@@ -39,17 +31,6 @@
     float: left;
     
 }
-
-/* #edit1{
-    margin-top: 50px;
-    margin-right: 10%;
-    margin-left: 25%;
-    padding: 5px; 
-    color: white;
-    box-shadow: 0px 6px 6px rgb(226, 145, 145);
-    font-size: 25px;
-    float:right 
-} */
 
 .active{
     color: black;
@@ -94,6 +75,7 @@
     }
     #donars{
         margin-top: 20%;
+        margin-left: 2%;
     }
 }
 

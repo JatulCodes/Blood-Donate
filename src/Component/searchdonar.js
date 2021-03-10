@@ -35,19 +35,12 @@ class Searchdonar extends React.Component {
          }
 
         smile = (data) => {
-            // if(data.length<=0){
-            //     return(
-            //        <tr> <td colSpan="5"> <h3> Donar not available  </h3> </td>  </tr>
-            //     )
-            // }else {
                 if(data){
                     return data.map((item) => {
                         return(
                             <tr>
-                                {/* <td> {item.name} </td> */}
                                 <td> {item.DOB} </td>
                                 <td> {item.bloodgroup} </td>
-                                {/* <td> {item.weight} </td> */}
                                 <td> {item.area} </td>
                                 <td> {item.mobileno} </td>
                             </tr>
@@ -55,7 +48,6 @@ class Searchdonar extends React.Component {
                         )
                     })
                 }
-            // }
          }
            
     render(){
@@ -76,11 +68,8 @@ class Searchdonar extends React.Component {
                     <table className="table table-responsive" id="tabledessign">
                         <thead>
                             <tr>
-                            {/* <th> OrderId </th> */}
-                            {/* <th> Name </th> */}
                             <th> DOB </th>
                             <th> Bloodgroup </th>
-                            {/* <th> Weight </th> */}
                             <th> Area </th>
                             <th> Mobileno </th>
                             </tr>
