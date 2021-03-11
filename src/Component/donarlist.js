@@ -39,14 +39,11 @@ const Donarlist = (props) =>{
                         <table className="table  table-bordered table-hover" id="donartable">
                             <thead>
                                 <tr  class="bg-warning">
-                                {/* <th> OrderId </th> */}
                                 <th> Name </th>
-                                {/* <th> Gender </th> */}
                                 <th> DOB </th>
                                 <th> Bloodgroup </th>
                                 <th> Weight </th>
                                 <th> Address </th>
-                                {/* <th> Mobileno </th> */}
                                 <th> Delete Donar </th>
                                 </tr>
                             </thead>

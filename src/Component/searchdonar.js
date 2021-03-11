@@ -28,8 +28,7 @@ class Searchdonar extends React.Component {
          handlesearch = (event) =>{
             fetch(`${rurl}/${event.target.value}`,{method:'GET'})
             .then((res)=> res.json())
-            .then((data) => { 
-                // console.log(data) 
+            .then((data) => {  
                 this.setState({donar:data})
             })
          }
@@ -51,8 +50,6 @@ class Searchdonar extends React.Component {
          }
            
     render(){
-        
-        // console.log(this.state.bloodtype)
         return (
             <div className="container">
                 <h2 id="contacttext">   Select your require blood type and connect to an available donar  </h2> 
@@ -68,10 +65,10 @@ class Searchdonar extends React.Component {
                     <table className="table table-responsive" id="tabledessign">
                         <thead>
                             <tr>
-                            <th> DOB </th>
-                            <th> Bloodgroup </th>
-                            <th> Area </th>
-                            <th> Mobileno </th>
+                                <th> DOB </th>
+                                <th> Bloodgroup </th>
+                                <th> Area </th>
+                                <th> Mobileno </th>
                             </tr>
                             {this.smile(this.state.donar)}
                         </thead>

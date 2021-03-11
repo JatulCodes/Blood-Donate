@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import './donarlist.css'
-
 const url = "https://blood-donr.herokuapp.com/register"
 
 class Donarfilter extends React.Component {
@@ -9,7 +8,6 @@ class Donarfilter extends React.Component {
         super(props) 
     } 
      Groupfilter = (event) => {
-      
         let grpUrl 
         if(event.target.value==''){
             grpUrl= `${url}`
@@ -26,7 +24,7 @@ class Donarfilter extends React.Component {
 
     render(){    
         return(
-            <div className="groupfilter" onChange={this.Groupfilter} >
+            <div className="groupfilter" onChange={this.Groupfilter}>
                 <h2 id="bloodfilterheading" > Blood Group </h2>  
                 <p id="bloodfiltertext" > Filter Donars on the basis of bloodgroup </p>
                 <label> <input type="radio" value="" name="group"/> 

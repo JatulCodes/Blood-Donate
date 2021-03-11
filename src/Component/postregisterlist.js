@@ -18,34 +18,32 @@ const Postrequire = (props) => {
                 var beforeMonth = Number(beforeDate[1]);
                 var beforeDate = Number(beforeDate[2]);
                 if (currentYear >= beforeYear){   
-                if(currentMonth >= beforeMonth){ 
-                    if(currentMonth > beforeMonth){
-                            fetch(`${url}/${item._id}`,
-                                { 
-                                    method:'DELETE',
-                                    headers:{
-                                        'Accept':'application/json',
-                                        'Content-Type':'application/json'
-                                    }
-                                })   
-                    } 
-                    else{ 
-                            if(currentDate>=beforeDate){
+                    if(currentMonth >= beforeMonth){ 
+                        if(currentMonth > beforeMonth){
                                 fetch(`${url}/${item._id}`,
-                                { 
-                                    method:'DELETE',
-                                    headers:{
-                                        'Accept':'application/json',
-                                        'Content-Type':'application/json'
-                                    }
-                                })
-                            }
-                    }
-                    
-                    }     
-                //month cndition end///
-                } 
-                //year condition close//
+                                    { 
+                                        method:'DELETE',
+                                        headers:{
+                                            'Accept':'application/json',
+                                            'Content-Type':'application/json'
+                                        }
+                                    })   
+                        } 
+                        else{ 
+                                if(currentDate>=beforeDate){
+                                    fetch(`${url}/${item._id}`,
+                                    { 
+                                        method:'DELETE',
+                                        headers:{
+                                            'Accept':'application/json',
+                                            'Content-Type':'application/json'
+                                        }
+                                    })
+                                }
+                        }
+                        
+                        }     
+                    } 
                 return(
                     <tr>
                     <td> {item.bloodgroup} </td>

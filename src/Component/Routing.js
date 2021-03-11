@@ -26,7 +26,7 @@ const Routing = () => {
                 <Route  path ='/Compability' component={Comp}/> 
                 <Route  path ='/Bloodfacts' component={Blood}/>
                 <Route  path ='/Donarregister' component={Register}/>
-                <Route  path ='/Searchdonar' component={Searchdonar}/> 
+                <Route  path ='/Searchdonar' component={Searchdonar}/>   
                 <Route  path ='/bookinglist' component={Donarapi}/> 
                 <Route  path ='/Bloodrequired' component={Requireapi}/> 
                 <Route  path ='/del/:id' component={Deldonar}/> 
